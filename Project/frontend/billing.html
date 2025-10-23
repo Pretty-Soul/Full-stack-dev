@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing - Susegad Supplies</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        </header>
+    <nav class="mobile-nav" id="mobile-nav">
+        </nav>
+
+    <main>
+        <section id="billing-page">
+            <div class="container">
+                <h1 class="page-title">Final Step: Billing</h1>
+                <div class="billing-layout">
+                    <div class="final-review-card">
+                        <h3>Review Your Order</h3>
+                        <div class="review-section">
+                            <h4>Shipping To:</h4>
+                            <div id="review-shipping-address">
+                                <p>Loading address...</p>
+                            </div>
+                        </div>
+                        <div class="review-section">
+                            <h4>Items:</h4>
+                            <div id="review-items-container">
+                                <p>Loading items...</p>
+                            </div>
+                        </div>
+                        <div class="summary-total">
+                            <strong>Total:</strong>
+                            <strong id="review-total-price">₹0</strong>
+                        </div>
+                    </div>
+
+                    <div class="payment-method-card">
+                        <h3>Payment Method</h3>
+                        <form id="payment-form">
+                            <div class="payment-option">
+                                <input type="radio" id="cod" name="paymentMethod" value="Cash on Delivery" checked>
+                                <label for="cod">Cash on Delivery (COD)</label>
+                                <p class="payment-desc">Pay with cash when your order arrives.</p>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="card" name="paymentMethod" value="Credit/Debit Card">
+                                <label for="card">Credit / Debit Card</label>
+                                <p class="payment-desc">Pay securely with your card (Simulation only).</p>
+                            </div>
+                            
+                            <button type="submit" class="cta-button confirm-order-btn" id="pay-btn">Pay & Complete Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

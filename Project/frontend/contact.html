@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Susegad Supplies</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Susegad Supplies</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="header-cart-btn" id="open-cart-btn">
+                    <img src="https://api.iconify.design/mdi/cart-outline.svg?color=%2343362a" alt="Shopping Cart">
+                    <span class="cart-item-count" id="cart-item-count">0</span>
+                </button>
+                <div id="user-profile-container" class="hidden">
+                    <img src="https://api.iconify.design/mdi/account-circle.svg?color=%23d4a373" alt="User Profile" id="user-icon">
+                    <div id="user-menu" class="user-menu hidden">
+                        <h4>Welcome, <span id="username-display">User</span>!</h4>
+                        <ul>
+                            <li><a href="profile.html">View Profile</a></li>
+                            <li><a href="order-history.html">Order History</a></li>
+                            <li><button id="logout-btn">Logout</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <button id="login-open-btn" class="login-button">Login / Sign Up</button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <section id="contact-page">
+            <div class="container">
+                <h1 class="page-title">Contact Us</h1>
+                <div class="contact-layout">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <p>We'd love to hear from you! Whether you have a question about our products or you're ready to place an order, our team is here to help.</p>
+                        <div class="info-item"><h4>Our Location</h4><p>Madgaon, Goa, India</p></div>
+                        <div class="info-item"><h4>Phone / WhatsApp</h4><p><a href="tel:+919876543210">+91 98765 43210</a></p></div>
+                        <div class="info-item"><h4>Email for Inquiries</h4><p><a href="mailto:orders@susegadsupplies.com">orders@susegadsupplies.com</a></p></div>
+                    </div>
+                    <div class="contact-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30791.0337050308!2d73.9495628468725!3d15.27980998379468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb3b34b868611%3A0x111234f9a65bd20!2sMargao%2C%20Goa!5e0!3m2!1sen!2sin!4v1663332768502!5m2!1sen!2sin"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Susegad Supplies. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <div id="login-modal" class="modal-overlay hidden">
+        <div class="modal-content"><button class="modal-close-btn" id="login-close-btn">×</button><form id="login-form"><h2>Welcome Back!</h2><div class="form-group"><label for="login-email">Email</label><input type="email" id="login-email" required placeholder="you@example.com"></div><div class="form-group"><label for="login-password">Password</label><input type="password" id="login-password" required placeholder="••••••••"></div><p id="login-error-message" class="error-message"></p><button type="submit" class="cta-button login-btn">Login</button><p class="form-switcher">Don't have an account? <a href="#" id="show-signup-link">Sign Up</a></p></form></div>
+    </div>
+    <div id="signup-modal" class="modal-overlay hidden">
+        <div class="modal-content"><button class="modal-close-btn" id="signup-close-btn">×</button><form id="signup-form"><h2>Create Account</h2><div class="form-group"><label for="signup-name">Your Name</label><input type="text" id="signup-name" required placeholder="John Doe"></div><div class="form-group"><label for="signup-email">Email</label><input type="email" id="signup-email" required placeholder="you@example.com"></div><div class="form-group"><label for="signup-password">Password</label><input type="password" id="signup-password" required placeholder="Minimum 6 characters"></div><p id="signup-error-message" class="error-message"></p><button type="submit" class="cta-button login-btn">Sign Up</button><p class="form-switcher">Already have an account? <a href="#" id="show-login-link">Login</a></p></form></div>
+    </div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <button class="cart-close-btn" id="cart-close-btn">×</button><h2>Your Cart</h2><div id="cart-items" class="cart-items"></div><div class="cart-footer"><div class="cart-total"><strong>Total:</strong> <span id="cart-total-price">₹0</span></div><button class="cta-button checkout-btn" id="checkout-btn">Place Order</button></div>
+    </div>
+    <div id="toast-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>

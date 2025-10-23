@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Susegad Supplies</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        </header>
+    <nav class="mobile-nav" id="mobile-nav">
+        </nav>
+
+    <main>
+        <section id="checkout-page">
+            <div class="container">
+                <h1 class="page-title">Checkout</h1>
+                <div class="checkout-layout">
+                    <div class="order-summary-card">
+                        <h3>Order Summary</h3>
+                        <div id="summary-items-container">
+                            <p>Loading your cart...</p>
+                        </div>
+                        <div class="summary-total">
+                            <strong>Total:</strong>
+                            <strong id="summary-total-price">₹0</strong>
+                        </div>
+                    </div>
+
+                    <div class="shipping-details-card">
+                        <h3>Shipping Details</h3>
+                        <form id="shipping-form">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Street Address</label>
+                                <input type="text" id="address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City / Town</label>
+                                <input type="text" id="city" value="Madgaon" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pincode">Pincode</label>
+                                <input type="text" id="pincode" required>
+                            </div>
+                            
+                            <h3>Mode of Transport</h3>
+                            <div class="shipping-option">
+                                <input type="radio" id="standard-delivery" name="shippingMethod" value="Standard" checked>
+                                <label for="standard-delivery">Standard Delivery (2-3 hours) - Free</label>
+                            </div>
+                            <div class="shipping-option">
+                                <input type="radio" id="express-delivery" name="shippingMethod" value="Express">
+                                <label for="express-delivery">Express Delivery (Under 1 hour) - ₹50</label>
+                            </div>
+
+                            <button type="submit" class="cta-button confirm-order-btn" id="confirm-order-btn">Confirm & Place Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

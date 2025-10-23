@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susegad Supplies - Authentic Goan Goods Delivered</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Susegad Supplies</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="header-cart-btn" id="open-cart-btn">
+                    <img src="https://api.iconify.design/mdi/cart-outline.svg?color=%2343362a" alt="Shopping Cart">
+                    <span class="cart-item-count" id="cart-item-count">0</span>
+                </button>
+                <div id="user-profile-container" class="hidden">
+                    <img src="https://api.iconify.design/mdi/account-circle.svg?color=%236a994e" alt="User Profile" id="user-icon">
+                    <div id="user-menu" class="user-menu hidden">
+                        <h4>Welcome, <span id="username-display">User</span>!</h4>
+                        <ul>
+                            <li><a href="profile.html">View Profile</a></li>
+                            <li><a href="order-history.html">Order History</a></li>
+                            <li><button id="logout-btn">Logout</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <button id="login-open-btn" class="login-button">Login / Sign Up</button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="mobile-nav" id="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <section class="hero-split">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1>Your Daily Dose of Goan Goodness.</h1>
+                    <p>From fresh Poee to fiery Recheado masala, get all your local favorites delivered fast. Pure susegad, no stress.</p>
+                    <a href="products.html" class="cta-button">Explore Our Products</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero-market.jpg" alt="Vibrant Goan street food market">
+                </div>
+            </div>
+        </section>
+        <section id="our-promise">
+            <div class="container">
+                <div class="promise-item">
+                    <h4>Locally Sourced</h4>
+                    <p>We partner with the best local artisans and producers.</p>
+                </div>
+                <div class="promise-item">
+                    <h4>Always Fresh</h4>
+                    <p>Quality and freshness are at the heart of everything we deliver.</p>
+                </div>
+                <div class="promise-item">
+                    <h4>At Your Doorstep</h4>
+                    <p>Simple ordering and quick, reliable delivery in Madgaon.</p>
+                </div>
+            </div>
+        </section>
+        <section id="featured-categories">
+            <div class="container">
+                <h2>A Few of Our Favorites</h2>
+                <div class="product-grid" id="featured-products-grid"></div>
+            </div>
+        </section>
+        <section id="how-to-order">
+            <div class="container">
+                <h2>Ordering is Easy</h2>
+                <div class="order-steps">
+                    <div class="step"><div class="step-number">1</div><div class="step-text"><h3>Browse Our Products</h3><p>Explore our selection of authentic Goan goods on the products page.</p></div></div>
+                    <div class="step"><div class="step-number">2</div><div class="step-text"><h3>Call or Message Us</h3><p>Contact us with your list. We'll confirm your order and address.</p></div></div>
+                    <div class="step"><div class="step-number">3</div><div class="step-text"><h3>Relax & Enjoy</h3><p>We'll deliver your order fresh and fast, right to your doorstep.</p></div></div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>Ready to place an order? We're here to help!</p>
+                <a href="tel:+919876543210" class="cta-button large-cta">📞 Call +91 98765 43210</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2025 Susegad Supplies. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <div id="login-modal" class="modal-overlay hidden">
+        <div class="modal-content"><button class="modal-close-btn" id="login-close-btn">×</button><form id="login-form"><h2>Welcome Back!</h2><div class="form-group"><label for="login-email">Email</label><input type="email" id="login-email" required placeholder="you@example.com"></div><div class="form-group"><label for="login-password">Password</label><input type="password" id="login-password" required placeholder="••••••••"></div><p id="login-error-message" class="error-message"></p><button type="submit" class="cta-button login-btn">Login</button><p class="form-switcher">Don't have an account? <a href="#" id="show-signup-link">Sign Up</a></p></form></div>
+    </div>
+    <div id="signup-modal" class="modal-overlay hidden">
+        <div class="modal-content"><button class="modal-close-btn" id="signup-close-btn">×</button><form id="signup-form"><h2>Create Account</h2><div class="form-group"><label for="signup-name">Your Name</label><input type="text" id="signup-name" required placeholder="John Doe"></div><div class="form-group"><label for="signup-email">Email</label><input type="email" id="signup-email" required placeholder="you@example.com"></div><div class="form-group"><label for="signup-password">Password</label><input type="password" id="signup-password" required placeholder="Minimum 6 characters"></div><p id="signup-error-message" class="error-message"></p><button type="submit" class="cta-button login-btn">Sign Up</button><p class="form-switcher">Already have an account? <a href="#" id="show-login-link">Login</a></p></form></div>
+    </div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <button class="cart-close-btn" id="cart-close-btn">×</button><h2>Your Cart</h2><div id="cart-items" class="cart-items"></div><div class="cart-footer"><div class="cart-total"><strong>Total:</strong> <span id="cart-total-price">₹0</span></div><button class="cta-button checkout-btn" id="checkout-btn">Place Order</button></div>
+    </div>
+    <div id="toast-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>

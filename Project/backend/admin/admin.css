@@ -1,0 +1,157 @@
+/* --- Global Styles & Layout --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Form Styles --- */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+input[type="text"], 
+input[type="number"],
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* --- Table Styles (Product Inventory) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Stock Controls inside the table */
+.stock-controls {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.stock-controls .btn {
+    padding: 5px 10px;
+    background-color: #bdc3c7;
+    color: white;
+}
+
+.stock-controls .btn:hover {
+    background-color: #95a5a6;
+}
+
+.stock-value {
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* --- Category List Styles --- */
+#category-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#category-list li {
+    padding: 5px 0;
+    color: #2c3e50;
+}
+
+/* --- TOAST NOTIFICATION STYLES (CRITICAL) --- */
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toast {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color: white;
+    opacity: 0; /* Hidden by default */
+    transform: translateX(100%); /* Start off-screen */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.toast.show {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Move on-screen */
+}
+
+/* Toast Color Schemes */
+.toast.success {
+    background-color: #2ecc71; /* Green */
+}
+
+.toast.error {
+    background-color: #e74c3c; /* Red */
+}

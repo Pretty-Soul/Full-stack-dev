@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Susegad Supplies</title>
+    <link rel="stylesheet" href="admin.css">
+    </head>
+<body>
+
+    <h1>Admin Dashboard</h1>
+
+    <div id="toast-container"></div>
+
+    <section>
+        <h2>Add New Product</h2>
+        <form id="add-product-form">
+            <input type="text" id="name" placeholder="Product Name" required>
+            <input type="number" id="price" placeholder="Price" step="0.01" required>
+            <input type="number" id="stock" placeholder="Stock Quantity" required>
+            <input type="text" id="imageUrl" placeholder="Image URL (Optional)">
+            
+            <select id="category" required>
+                <option value="" disabled selected>Select a Category</option>
+            </select>
+
+            <button type="submit">Add Product</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Manage Categories</h2>
+        <form id="add-category-form">
+            <input type="text" id="new-category-name" placeholder="New Category Name" required>
+            <button type="submit">Add Category</button>
+        </form>
+        <h3>Existing Categories</h3>
+        <ul id="category-list">
+            </ul>
+    </section>
+
+    <section>
+        <h2>Product Inventory</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Stock</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="inventory-table-body">
+                </tbody>
+        </table>
+    </section>
+
+    <script src="admin.js"></script> 
+</body>
+</html>
